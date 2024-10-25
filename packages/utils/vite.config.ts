@@ -1,19 +1,19 @@
 import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
+  plugins: [vue()],
   build: {
     lib: {
       entry: './lib/index.ts',
-      name: 'Utils',
-      fileName: 'utils'
+      name: 'Lib',
+      fileName: 'lib'
     },
-    // 排除文件
     rollupOptions: {
-      external: ['moment', 'dayjs'],
+      external: ['moment'],
       output: {
         globals: {
-          moment: 'moment',
-          dayjs: 'dayjs'
+          moment: 'moment'
         }
       }
     }

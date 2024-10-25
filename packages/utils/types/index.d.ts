@@ -1,1 +1,2 @@
-export { formatDateToTimestamp } from './format';
+import { formatDateToTimestamp } from './date';
+export { formatDateToTimestamp };

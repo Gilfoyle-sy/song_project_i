@@ -1,1 +1,3 @@
-export { formatDateToTimestamp } from './date'
+import { formatDateToTimestamp } from './date'
+
+export { formatDateToTimestamp }
