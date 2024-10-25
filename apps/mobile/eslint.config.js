@@ -6,14 +6,18 @@ export default [
   {
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
+    rules: {
+      'vue/multi-word-component-names': ['error', {
+        'ignores': ['index', 'Index']
+      }]
+    }
   },
 
   {
     name: 'app/files-to-ignore',
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
-
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
-  skipFormatting,
+  skipFormatting
 ]
