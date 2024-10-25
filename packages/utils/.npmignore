@@ -1,6 +1,8 @@
+lib
 node_modules
 src
-lib
-vite.config.ts
-tsconfig.json
 index.html
+tsconfig.json
+tsconfig.app.ts
+tsconfig.node.ts
+vite.config.ts
