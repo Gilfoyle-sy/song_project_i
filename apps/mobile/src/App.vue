@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import * as a from '@song_project_i/utils'
-console.log(a.formatDateToTimestamp('2023-06-01 02:00:00'))
 </script>
 
 <template>
@@ -14,7 +12,6 @@ console.log(a.formatDateToTimestamp('2023-06-01 02:00:00'))
       width="125"
       height="125"
     />
-
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 

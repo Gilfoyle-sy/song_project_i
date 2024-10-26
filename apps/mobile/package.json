@@ -11,5 +11,8 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@song_project_i/utils": "workspace:^"
   }
 }
