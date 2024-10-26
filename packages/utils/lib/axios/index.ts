@@ -1,9 +1,4 @@
-import axios, {
-  AxiosError,
-  AxiosInstance,
-  AxiosRequestConfig,
-  AxiosResponse
-} from 'axios'
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 
 class Iaxios {
   instance: AxiosInstance
