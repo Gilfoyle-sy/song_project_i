@@ -13,6 +13,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@song_project_i/utils": "workspace:^"
+    "@song_project_i/utils": "workspace:^",
+    "vant": "^4.9.8"
+  },
+  "devDependencies": {
+    "@vant/auto-import-resolver": "^1.2.1"
   }
 }
