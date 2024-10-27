@@ -1,11 +1,16 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterView } from 'vue-router'
+const theme = ref('dark')
+setTimeout(() => {
+  // theme.value = 'light'
+}, 3000)
 </script>
 
 <template>
-  <van-button type="primary">123</van-button>
-
-  <RouterView />
+  <van-config-provider :theme="theme">
+    <RouterView />
+  </van-config-provider>
 </template>
 
 <style scoped></style>
