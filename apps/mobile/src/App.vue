@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { RouterView } from 'vue-router'
 const theme = ref('dark')
 setTimeout(() => {
-  // theme.value = 'light'
+  theme.value = 'light'
 }, 3000)
 </script>
 

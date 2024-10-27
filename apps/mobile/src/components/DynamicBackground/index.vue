@@ -28,7 +28,6 @@ const colors = ['#836fff', '#15f5ba', ' #69f2ff']
 
 onMounted(() => {
   ctx.value = canvas.value.getContext('2d') as CanvasRenderingContext2D
-  console.log(ctx.value)
   window.addEventListener('resize', resizeCanvas)
   resizeCanvas()
   animate()
@@ -102,15 +101,16 @@ function drawCircle(circle: Circle) {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   background-color: #211951;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: -1;
 
   &::before {
     content: '';
-    background: hsla(0, 0%, 41%, 0.25);
+    background: rgba(105, 105, 105, 0.25);
     backdrop-filter: blur(70px);
     position: absolute;
     top: 0;
