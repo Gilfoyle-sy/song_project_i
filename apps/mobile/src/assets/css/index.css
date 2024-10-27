@@ -6,9 +6,14 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+  color: var(--van-text-color);
 }
 
 body {
   min-height: 100vh;
   background-color: var(--van-background);
+}
+
+#app {
+  height: 100vh;
 }

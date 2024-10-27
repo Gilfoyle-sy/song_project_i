@@ -4,8 +4,4 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
-.title {
-  color: var(--van-text-color);
-}
-</style>
+<style scoped lang="scss"></style>

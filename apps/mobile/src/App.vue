@@ -8,9 +8,16 @@ setTimeout(() => {
 </script>
 
 <template>
-  <van-config-provider :theme="theme">
+  <van-config-provider
+    class="app-container"
+    :theme="theme"
+  >
     <RouterView />
   </van-config-provider>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.app-container {
+  height: 100vh;
+}
+</style>

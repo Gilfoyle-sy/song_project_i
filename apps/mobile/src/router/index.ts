@@ -1,19 +1,26 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: () => import('../views/HomePage/index.vue')
     },
     {
       path: '/login',
-      name: 'login',
+      name: 'Login',
       component: () => import('../views/LoginPage/index.vue')
     }
   ]
+})
+
+router.beforeEach(to => {
+  const isLogined = false
+  if (!isLogined && to.name !== 'Login') {
+    return { name: 'Login' }
+  }
 })
 
 export default router
