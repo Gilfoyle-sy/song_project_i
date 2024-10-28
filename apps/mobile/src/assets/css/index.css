@@ -1,4 +1,5 @@
 @import './vant_basic.css';
+@import './custom_var.css';
 
 *,
 *::before,
@@ -6,7 +7,6 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
-  color: var(--van-text-color);
 }
 
 body {

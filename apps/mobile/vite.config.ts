@@ -7,6 +7,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from '@vant/auto-import-resolver'
+import mobile from 'postcss-mobile-forever' // <---- 这里
+import autoprefixer from 'autoprefixer'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -31,6 +33,16 @@ export default defineConfig({
       scss: {
         api: 'modern-compiler' // or 'modern' 避免sass在控制台的警告
       }
+    },
+    postcss: {
+      plugins: [
+        autoprefixer(),
+        mobile({
+          appSelector: '#app',
+          viewportWidth: 375,
+          maxDisplayWidth: 580
+        })
+      ]
     }
   }
 })

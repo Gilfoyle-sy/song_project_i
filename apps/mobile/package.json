@@ -14,9 +14,12 @@
   },
   "dependencies": {
     "@song_project_i/utils": "workspace:^",
+    "autoprefixer": "^10.4.20",
     "vant": "^4.9.8"
   },
   "devDependencies": {
-    "@vant/auto-import-resolver": "^1.2.1"
+    "@vant/auto-import-resolver": "^1.2.1",
+    "postcss": "^8.4.47",
+    "postcss-mobile-forever": "^4.2.3"
   }
 }

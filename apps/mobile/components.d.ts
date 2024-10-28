@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AgreementLine: typeof import('./src/components/AgreementLine/index.vue')['default']
     Asd: typeof import('./src/components/asd/index.vue')['default']
     CanvasBg: typeof import('./src/components/CanvasBg/index.vue')['default']
     DynamicBackground: typeof import('./src/components/DynamicBackground/index.vue')['default']
@@ -21,8 +22,11 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     VanButton: typeof import('vant/es')['Button']
+    VanCheckbox: typeof import('vant/es')['Checkbox']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanField: typeof import('vant/es')['Field']
+    VanNavBar: typeof import('vant/es')['NavBar']
+    VanNumberKeyboard: typeof import('vant/es')['NumberKeyboard']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }

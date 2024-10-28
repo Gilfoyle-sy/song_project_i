@@ -1,23 +1,25 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterView } from 'vue-router'
-const theme = ref('dark')
+import type { ConfigProviderTheme } from 'vant'
+const theme = ref<ConfigProviderTheme>('light')
 setTimeout(() => {
-  theme.value = 'light'
+  theme.value = 'dark'
 }, 3000)
 </script>
 
 <template>
-  <van-config-provider
-    class="app-container"
-    :theme="theme"
-  >
+  <!-- <van-nav-bar safe-area-inset-top /> -->
+
+  <van-config-provider class="app-container" :theme="theme">
     <RouterView />
   </van-config-provider>
+
+  <van-number-keyboard safe-area-inset-bottom />
 </template>
 
 <style lang="scss" scoped>
 .app-container {
-  height: 100vh;
+  height: 100%;
 }
 </style>

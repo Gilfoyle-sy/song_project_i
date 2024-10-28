@@ -27,19 +27,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-defineProps({
-  placeholder: {
-    type: String,
-    default: '请输入密码'
-  }
-})
+const { placeholder = '请输入密码' } = defineProps<{
+  placeholder?: string
+}>()
 const password = defineModel({ default: '' })
 const showPassword = ref(false)
 </script>
 
 <style lang="scss" scoped>
 .van-field {
-  border: 1px solid #d1dbe2;
+  border: 1px solid var(--van-border-color);
   border-radius: 4px;
   margin-bottom: 16px;
   .van-field__right-icon {
