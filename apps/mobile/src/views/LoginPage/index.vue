@@ -22,7 +22,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { showToast } from 'vant'
 import { useRouter } from 'vue-router'
 import InputPassword from '@/components/InputPassword/index.vue'
 import AgreementLine from '@/components/AgreementLine/index.vue'
@@ -34,9 +33,7 @@ const isAgree = ref(false)
 
 const router = useRouter()
 function onLogin() {
-  console.log(userPwd.value)
   if (!isAgree.value) return showToast('请阅读协议并同意')
-
   router.push({ name: 'Home' })
 }
 </script>

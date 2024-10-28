@@ -17,10 +17,10 @@ const router = createRouter({
 })
 
 router.beforeEach(to => {
-  const isLogined = false
-  if (!isLogined && to.name !== 'Login') {
-    return { name: 'Login' }
-  }
+  // const isLogined = false
+  // if (!isLogined && to.name !== 'Login') {
+  //   return { name: 'Login' }
+  // }
 })
 
 export default router

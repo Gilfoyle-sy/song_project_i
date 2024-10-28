@@ -1,5 +1,5 @@
 <template>
-  <div class="title">这是首页</div>
+  <div class="home-page"></div>
 </template>
 
 <script setup lang="ts"></script>
