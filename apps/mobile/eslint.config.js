@@ -8,7 +8,7 @@ export default [
     files: ['**/*.{ts,mts,tsx,vue}'],
     rules: {
       'vue/multi-word-component-names': ['error', {
-        'ignores': ['index', 'Index']
+        'ignores': ['index', 'Index', 'Tabbar']
       }]
     }
   },

@@ -20,6 +20,7 @@ declare module 'vue' {
     InputPassword: typeof import('./src/components/InputPassword/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Tabbar: typeof import('./src/components/Tabbar/index.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     VanButton: typeof import('vant/es')['Button']
     VanCheckbox: typeof import('vant/es')['Checkbox']
@@ -27,6 +28,8 @@ declare module 'vue' {
     VanField: typeof import('vant/es')['Field']
     VanNavBar: typeof import('vant/es')['NavBar']
     VanNumberKeyboard: typeof import('vant/es')['NumberKeyboard']
+    VanTabbar: typeof import('vant/es')['Tabbar']
+    VanTabbarItem: typeof import('vant/es')['TabbarItem']
     VanTag: typeof import('vant/es')['Tag']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
