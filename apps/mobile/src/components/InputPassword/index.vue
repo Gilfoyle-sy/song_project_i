@@ -37,7 +37,7 @@ const showPassword = ref(false)
 <style lang="scss" scoped>
 .van-field {
   border: 1px solid var(--van-border-color);
-  border-radius: 4px;
+  border-radius: var(--van-radius-md);
   margin-bottom: 16px;
   .van-field__right-icon {
     .icon-eye {

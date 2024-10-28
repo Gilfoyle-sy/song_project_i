@@ -16,21 +16,16 @@
       <van-button type="primary" block @click="onLogin"> 登录 </van-button>
     </div>
 
-    <div class="footer">
-      <van-checkbox v-model="isAgree"></van-checkbox>
-      &nbsp; 我已阅读
-      <div class="tip">《隐私协议》</div>
-      与
-      <div class="tip">《用户服务协议》</div>
-    </div>
+    <AgreementLine class="footer" v-model="isAgree" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import InputPassword from '@/components/InputPassword/index.vue'
 import { showToast } from 'vant'
 import { useRouter } from 'vue-router'
+import InputPassword from '@/components/InputPassword/index.vue'
+import AgreementLine from '@/components/AgreementLine/index.vue'
 
 const userPhone = ref('admin')
 const userPwd = ref('admin')
@@ -61,7 +56,7 @@ function onLogin() {
     justify-content: flex-end;
     width: 100%;
     height: 220px;
-    padding: 0 24px 40px;
+    padding: 0 var(--i-page-gap) 40px;
     background-image: url('@/assets/background/bg-login.png');
     background-size: cover;
     div {
@@ -71,12 +66,12 @@ function onLogin() {
   }
 
   .form {
-    padding: 36px;
+    padding: calc(var(--i-page-gap) + 8px);
 
     .title {
-      font-size: 18px;
+      font-size: var(--van-font-size-lg);
       width: max-content;
-      padding-bottom: 4px;
+      padding-bottom: var(--van-padding-xs);
       margin-bottom: 16px;
       border-bottom: 3px solid #4787fa;
     }
@@ -84,20 +79,12 @@ function onLogin() {
 
   .footer {
     margin-top: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     padding-bottom: 36px;
-
-    .tip {
-      color: #4787fa;
-    }
   }
 
   .van-field {
     border: 1px solid var(--van-border-color);
-    border-radius: 4px;
+    border-radius: var(--van-radius-md);
     margin-bottom: 16px;
   }
 }

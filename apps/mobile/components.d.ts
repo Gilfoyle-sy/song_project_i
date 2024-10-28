@@ -27,6 +27,7 @@ declare module 'vue' {
     VanField: typeof import('vant/es')['Field']
     VanNavBar: typeof import('vant/es')['NavBar']
     VanNumberKeyboard: typeof import('vant/es')['NumberKeyboard']
+    VanTag: typeof import('vant/es')['Tag']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }
