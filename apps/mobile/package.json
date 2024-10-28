@@ -15,7 +15,8 @@
   "dependencies": {
     "@song_project_i/utils": "workspace:^",
     "autoprefixer": "^10.4.20",
-    "vant": "^4.9.8"
+    "vant": "^4.9.8",
+    "vue-data-ui": "^2.3.45"
   },
   "devDependencies": {
     "@vant/auto-import-resolver": "^1.2.1",

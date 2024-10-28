@@ -3,9 +3,9 @@ import { ref, watchEffect } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
 import type { ConfigProviderTheme } from 'vant'
 import Tabbar from '@/components/Tabbar/index.vue'
-const theme = ref<ConfigProviderTheme>('light')
+const theme = ref<ConfigProviderTheme>('dark')
 setTimeout(() => {
-  theme.value = 'dark'
+  theme.value = 'light'
 }, 3000)
 
 const route = useRoute()
