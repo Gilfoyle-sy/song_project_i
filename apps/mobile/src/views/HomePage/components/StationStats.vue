@@ -28,8 +28,8 @@ const dataset = ref([
   { name: '正常', values: [1020], color: '#30c479' },
   { name: '未并网', values: [246], color: '#4ca4fd' },
   { name: '离线', values: [104], color: '#38cfff' },
-  { name: '故障', values: [50], color: '#f86f5c' },
-  { name: '异常', values: [100], color: '#ff9f30' }
+  { name: '故障', values: [323], color: '#f86f5c' },
+  { name: '异常', values: [237], color: '#ff9f30' }
 ])
 const config = ref(stationData)
 const themeStore = useThemeStore()

@@ -17,3 +17,8 @@ body {
 #app {
   height: 100vh;
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}

@@ -28,7 +28,7 @@ import SocialStats from './components/SocialStats.vue'
 
 <style scoped lang="scss">
 .home-page {
-  padding: var(--i-page-gap);
+  padding: var(--i-page-gap) var(--i-page-gap) 60px;
   color: var(--van-text-color);
 
   .content {

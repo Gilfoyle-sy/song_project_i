@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import type { ConfigProviderTheme } from 'vant'
+import { switchTheme } from '@/utils/a'
 
 export const useThemeStore = defineStore(
   'theme',
@@ -8,8 +9,10 @@ export const useThemeStore = defineStore(
     const theme = ref<ConfigProviderTheme>('light')
     const vueDataUiTheme = computed(() => (theme.value === 'light' ? 'zen' : 'hack'))
 
-    function toggle() {
-      theme.value = theme.value === 'light' ? 'dark' : 'light'
+    function toggle(target: MouseEvent) {
+      switchTheme(target, () => {
+        theme.value = theme.value === 'light' ? 'dark' : 'light'
+      })
     }
 
     function checkSystemTheme() {
