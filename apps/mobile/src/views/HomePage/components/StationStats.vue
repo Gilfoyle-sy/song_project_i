@@ -18,10 +18,11 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref, watch } from 'vue'
 import { VueDataUi } from 'vue-data-ui'
 import 'vue-data-ui/style.css'
 import { stationData } from './station_chart_config'
+import { useThemeStore } from '@/stores/theme'
 
 const dataset = ref([
   { name: '正常', values: [1020], color: '#30c479' },
@@ -31,12 +32,15 @@ const dataset = ref([
   { name: '异常', values: [100], color: '#ff9f30' }
 ])
 const config = ref(stationData)
+const themeStore = useThemeStore()
 
-onMounted(() => {
-  setTimeout(() => {
-    config.value.theme = 'zen'
-  }, 3000)
-})
+watch(
+  () => themeStore.vueDataUiTheme,
+  newVal => {
+    config.value.theme = newVal
+  },
+  { immediate: true }
+)
 </script>
 
 <style scoped lang="scss">

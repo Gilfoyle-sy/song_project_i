@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
-import type { ConfigProviderTheme } from 'vant'
-import Tabbar from '@/components/Tabbar/index.vue'
-const theme = ref<ConfigProviderTheme>('dark')
-setTimeout(() => {
-  theme.value = 'light'
-}, 3000)
+import { useThemeStore } from '@/stores/theme'
+import AppNavBar from '@/components/AppNavbar/index.vue'
+import AppTabbar from '@/components/AppTabbar/index.vue'
 
 const route = useRoute()
+const themeStore = useThemeStore()
 const meta = ref()
 
 watchEffect(() => {
@@ -19,15 +17,13 @@ watchEffect(() => {
 <template>
   <!-- <van-nav-bar safe-area-inset-top /> -->
 
-  <van-nav-bar v-if="!meta.hideNavBar" :title="meta.navBarTitle" fixed placeholder />
+  <AppNavBar v-if="!meta.hideNavBar" :title="meta.navBarTitle" />
 
-  <van-config-provider class="app-container" :theme="theme">
+  <van-config-provider class="app-container" :theme="themeStore.theme">
     <RouterView />
   </van-config-provider>
 
-  <Tabbar v-if="meta.showTabBar"></Tabbar>
-
-  <van-number-keyboard safe-area-inset-bottom />
+  <AppTabbar v-if="meta.showTabBar" />
 </template>
 
 <style lang="scss" scoped>
