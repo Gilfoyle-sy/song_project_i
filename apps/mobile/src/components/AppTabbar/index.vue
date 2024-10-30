@@ -9,13 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
 const active = ref(0)
-
-onMounted(() => {
-  console.log(active.value)
-})
 </script>
 
 <style lang="scss" scoped></style>

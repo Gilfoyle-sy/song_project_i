@@ -1,4 +1,4 @@
-export const stationData = {
+export const stationConfig = {
   responsive: false,
   theme: 'hack',
   customPalette: [],

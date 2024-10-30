@@ -1,29 +1,43 @@
 <template>
   <div class="home-page">
-    <div class="content">
-      <div class="title">电站统计</div>
+    <van-pull-refresh v-model="loading" @refresh="onRefresh">
+      <div class="content">
+        <div class="title">电站统计</div>
+        <StationStats />
+      </div>
 
-      <StationStats></StationStats>
-    </div>
+      <div class="content">
+        <div class="title">发电量统计</div>
+        <PowerStats />
+      </div>
 
-    <div class="content">
-      <div class="title">发电量统计</div>
-    </div>
+      <div class="content">
+        <div class="title">发电量图表</div>
+        <PowerChart />
+      </div>
 
-    <div class="content">
-      <div class="title">发电量图表</div>
-    </div>
-
-    <div class="content">
-      <div class="title">社会贡献</div>
-      <SocialStats></SocialStats>
-    </div>
+      <div class="content">
+        <div class="title">社会贡献</div>
+        <SocialStats />
+      </div>
+    </van-pull-refresh>
   </div>
 </template>
 
 <script setup lang="ts">
 import StationStats from './components/StationStats.vue'
+import PowerStats from './components/PowerStats.vue'
+import PowerChart from './components/PowerChart.vue'
 import SocialStats from './components/SocialStats.vue'
+import { ref } from 'vue'
+
+const loading = ref(false)
+const onRefresh = () => {
+  setTimeout(() => {
+    showToast('刷新成功')
+    loading.value = false
+  }, 1000)
+}
 </script>
 
 <style scoped lang="scss">

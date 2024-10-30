@@ -1,4 +1,9 @@
 /** 全局自定义变量 */
 :root {
   --i-page-gap: 20px;
+  --i-box-bg: #458cd3;
+}
+
+.van-theme-dark body {
+  --i-box-bg: #0654a3;
 }
