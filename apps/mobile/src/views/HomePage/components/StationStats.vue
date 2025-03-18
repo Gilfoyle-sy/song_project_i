@@ -2,13 +2,12 @@
   <div class="station-stats">
     <div class="text-content">
       <div class="text-item">
-        <StatsNum :num="testData.num1"></StatsNum>
-        <!-- <StatsNum :num="testData.obj.num2"></StatsNum> -->
+        <StatsNum :num="testData.num1" :decimals="0"></StatsNum>
         <div>电站总数量（户）</div>
       </div>
       <div class="line"></div>
       <div class="text-item">
-        <div>1101.37</div>
+        <StatsNum :num="testData?.obj?.num2"></StatsNum>
         <div>装机总容量（kW）</div>
       </div>
     </div>
@@ -19,39 +18,27 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
+import StatsNum from '@/components/StatsNum/index.vue'
 import { VueDataUi } from 'vue-data-ui'
 import 'vue-data-ui/style.css'
 import { stationConfig } from './station_chart_config'
 import { useThemeStore } from '@/stores/theme'
-import StatsNum from '@/components/StatsNum/index.vue'
 
-type Data = {
-  num1: number
-  obj: {
-    num2: number
-  }
-  arr: number[]
-}
-
-const testData = ref({} as Data)
+const testData = ref<any>({})
 
 onMounted(() => {
-  console.log(1)
   setTimeout(() => {
     const data = {
       num1: 100,
       obj: {
-        num2: 200
+        num2: 1101.37,
+        num3: 12
       },
       arr: [300]
     }
     testData.value = data
   }, 2000)
-})
-
-onUnmounted(() => {
-  console.log(2)
 })
 
 const dataset = ref([

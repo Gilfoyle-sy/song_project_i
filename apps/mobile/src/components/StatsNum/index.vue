@@ -1,5 +1,5 @@
 <template>
-  <span class="stats-num">{{ outputValue.toFixed(2) }}</span>
+  <span class="stats-num">{{ outputValue.toFixed(decimals) }}</span>
 </template>
 
 <script setup lang="ts">
@@ -7,8 +7,9 @@
 import { computed } from 'vue'
 import { useTransition } from '@vueuse/core'
 
-const { num = 0 } = defineProps<{
+const { num = 0, decimals = 2 } = defineProps<{
   num: number
+  decimals?: number
 }>()
 
 const copyNumComputed = computed(() => num)

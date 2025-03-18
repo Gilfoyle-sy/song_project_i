@@ -9,7 +9,8 @@ export default [
     rules: {
       'vue/multi-word-component-names': ['error', {
         'ignores': ['index', 'Index', 'Tabbar']
-      }]
+      }],
+
     }
   },
 
@@ -19,5 +20,11 @@ export default [
   },
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
-  skipFormatting
+  skipFormatting,
+  {
+    name: 'custome/eslint',
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off'
+    },
+  }
 ]

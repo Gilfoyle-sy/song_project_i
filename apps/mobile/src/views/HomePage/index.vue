@@ -11,10 +11,10 @@
         <PowerStats />
       </div>
 
-      <div class="content">
+      <!-- <div class="content">
         <div class="title">发电量图表</div>
         <PowerChart />
-      </div>
+      </div> -->
 
       <div class="content">
         <div class="title">社会贡献</div>
@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import StationStats from './components/StationStats.vue'
 import PowerStats from './components/PowerStats.vue'
-import PowerChart from './components/PowerChart.vue'
+// import PowerChart from './components/PowerChart.vue'
 import SocialStats from './components/SocialStats.vue'
 import { ref } from 'vue'
 
